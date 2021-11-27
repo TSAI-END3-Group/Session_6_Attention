@@ -122,6 +122,58 @@ We can see an example of how the attention is being used
 
 
 
+## Attention Mechanism Concept (My understanding)
+
+
+Refer to the typical Encoder-Decoder architecture
+![image](img/attention_mechanism/1.png)
+
+In a typical Encoder-Decoder setting the decoder will get the last hidden state of the encoder as the context vector and after that it is on its own. 
+
+However, 
+In case of the __Attention__ model the input to the Decoder changes along with the  previous state output we also have a __context vector__
+
+![image](img/attention_mechanism/2.png)
+
+
+* The __Context Vector__ is calculated using the __Attention__. 
+
+
+The Attention is a way to get a reference to all the previous Encoder outputs. 
+
+* This information is fed at each decoder unit. 
+* The decoder input is now a combination of the context vector and the previous state output O(t-1)
+
+![image](img/attention_mechanism/3.png)
+
+
+* There are  few steps involved in the calculation of the context vector. The most important being the calculation of the attention weights or the alphas
+
+* The attention weights is a distribution of weights from 0 to 1 that. is applied to the various states of Encoder Outputs. It represents how much contribution this particular Encoder Output is going to make in the Decoder Output at time t
+
+Now the Calculation of the Attention Weights can be done in many ways.
+The most common approach is called __Additive Attention__.
+
+This is basically to train a FC using Decoder hidden state at t-1 and Encoder Outputs to get a set of probability distributions
+This FC is learnt along with the network in the Back propagation step
+The idea is that the S(t-1) is almost like the O(t-1) with some additional information and now we want to see how this is dependent on the Encoder Outputs
+
+Here is a general setup of the step
+
+![image](img/attention_mechanism/4.png)
+
+There is an alternate approach taken by Pytorch Example
+They are using the input and the decoder hidden state to calculate the attention. **This approach doesnot involve the interaction with the Encoder outputs at all while calculating the attention which in my opinion is wrong. I have not been able to find any reference paper supporting this architecture.**
+
+![image](img/attention_mechanism/5.png)
+
+also we can see the same in the diagram from the pytorch example page  https://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html#
+
+
+
+![image](img/attention_mechanism/6.png)
+
+
 
 
 
