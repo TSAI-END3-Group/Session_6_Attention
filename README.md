@@ -73,7 +73,16 @@ The network will be trained to understand how the same sentence can be written i
 question1, question2
 
 
-[Quora]https://github.com/TSAI-END3-Group/Session_6_Attention/blob/master/Attention_pytorch_QA_Pairs.ipynb)  contains the code 
+[Quora](https://github.com/TSAI-END3-Group/Session_6_Attention/blob/master/Attention_pytorch_QA_Pairs.ipynb)  contains the code 
+
+
+## Code Files
+
+* [QAPairs](https://github.com/TSAI-END3-Group/Session_6_Attention/blob/master/Attention_pytorch_QA_Pairs.ipynb)  contains the QA pair code 
+
+
+* [Quora](https://github.com/TSAI-END3-Group/Session_6_Attention/blob/master/Attention_pytorch_QA_Pairs.ipynb)  contains the Quora duplicate questions code 
+
 
 
 ## Results
