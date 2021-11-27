@@ -81,7 +81,7 @@ question1, question2
 ### Question Answers Pair
 
 #### Training result
-Model is converging 
+Model is converging. The result is after 75000 epoch
 ![image](img/training_QA.png)
 
 #### Evaluation
@@ -90,14 +90,36 @@ Testing random samples with the trained model
 
 #### Attention visualization 
 We can see an example of how the attention is being used
+
 ![image](img/attention_res_QA.png)
 
 
 
 
+### Quora Duplicate Questions
+
+#### Training result
+Model is converging. The result is after 75000 epoch
+![image](img/training_Quora.png)
+
+#### Evaluation
+Testing random samples with the trained model
+![image](img/training_result_Quora.png)
+
+#### Attention visualization 
+We can see an example of how the attention is being used
+
+![image](img/attention_res_Quora.png)
 
 
 
 
-### Attention
+
+
+
+## Contributors
+* Rohit Agarwal
+* Kushal Gandhi
+* Vivek Kumar 
+* Ammishaddai U
 
