@@ -90,10 +90,13 @@ question1, question2
 ### Question Answers Pair
 
 #### Training result
+
 Model is converging. The result is after 75000 epoch
+
 ![image](img/training_QA.png)
 
 #### Evaluation
+
 Testing random samples with the trained model
 ![image](img/training_result_QA.png)
 
