@@ -178,7 +178,47 @@ also we can see the same in the diagram from the pytorch example page  https://p
 
 
 
+## Experiments with Different Attentions
 
+### Additive Attention:
+Some of the concept has been explained earlier. The following code implements the attention equation
+
+![image](img/attention_mechanism/additive_attention_formula.png)
+
+
+```
+## query is the decoder_hidden at time t-1 and values is the Encoder_output
+
+attn_weights = self.W_Decoder(query) + self.W_EncoderOutput(values)
+
+return F.softmax((torch.tanh(attn_weights) @ self.W_Combined),dim=1)
+
+```
+
+### Multiplicative Attention
+
+Following is the formula for this attention
+![image](img/attention_mechanism/multi_attention.png)
+
+
+```
+weights = query @ self.W @ values.T 
+return F.softmax((weights/np.sqrt(self.decoder_dim)),dim=1)
+
+```
+
+### pytorch Example Attention
+Following is the formula for this attention
+![image](img/attention_mechanism/pytorch_attention.png)
+
+```
+## embedded =input to the decoder at time t 
+## hidden is the decoder_state at time t-1
+attn_weights = F.softmax(
+            self.attn(torch.cat((embedded, hidden), 1)), dim=1) 
+        
+
+```
 
 
 ## Contributors
