@@ -1,6 +1,8 @@
 # Problem Statement
 This assignment is about working with __Seq2Seq__ class of problems using __Attention__
 
+Most of the code is the example code at https://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html
+
 We are supposed to use 2 public datasets to train on the given example code.
 One of the challenges is that the datasets are not meant only for seq2seq problems and have some extra fields which needs to be removed. 
 Basically we need to create a dataset with tab seperated lines
